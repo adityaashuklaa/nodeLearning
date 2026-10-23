@@ -11,3 +11,12 @@
 
 ## URL (Uniform Resource Locator)
 - url package is used to parse the url.
+
+## Express
+- Express is just a framework, which make life easier. Internally it uses http module.
+
+## Versioning
+- 4.18.2
+- .2 => Minor Fixes (Optional update)
+- .18 => Recommended Bug fix (security fix)
+- 4 => Major Release

@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/about", (req, res) => {
-    return res.send("Hello from About page.")
+    return res.send("Hello " + req.query.name)
 })
 
 app.listen(PORT, () => {

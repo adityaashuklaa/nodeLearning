@@ -20,3 +20,6 @@
 - .2 => Minor Fixes (Optional update)
 - .18 => Recommended Bug fix (security fix)
 - 4 => Major Release
+
+## Mocakaroo.com
+- It generates fake data for testing purposes

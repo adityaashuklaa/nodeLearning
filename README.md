@@ -23,3 +23,6 @@
 
 ## Mocakaroo.com
 - It generates fake data for testing purposes
+
+## Postman
+- Postman helps with API testing and documentation

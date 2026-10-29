@@ -26,3 +26,6 @@
 
 ## Postman
 - Postman helps with API testing and documentation
+
+## MVC (Model, View, Controller)
+- Controller manuplilates the model, and the model updates the view. This is the architecture and the flow of MVC model.

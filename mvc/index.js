@@ -30,4 +30,4 @@ connectDB()
     console.log("MONGODB Connection failed!!", err);  
 })
 
-app.use("/user", userRouter)
+app.use("/api/users", userRouter)

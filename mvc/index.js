@@ -1,6 +1,7 @@
 import dotenv from 'dotenv'
 import connectDB from './db/index.js'
 import express from 'express'
+import userRouter from "./routes/user.routes.js"
 
 dotenv.config({
     path: "./.env"
@@ -24,3 +25,5 @@ connectDB()
 .catch((err) => {
     console.log("MONGODB Connection failed!!", err);  
 })
+
+app.use("/user", userRouter)

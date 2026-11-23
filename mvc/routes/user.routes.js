@@ -1,5 +1,5 @@
 import express from 'express'
-import { User } from '../models/user.model';
+import { User } from '../models/user.model.js';
 
 const router = express.Router();
 
@@ -50,4 +50,4 @@ router.post("/", async (req, res) => {
     return res.status(201).json({ msg: "success" })
 })
 
-module.exports = router
+export default router

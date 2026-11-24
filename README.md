@@ -33,3 +33,7 @@
 
 ## ShortID
 - ShortID is a package that generates short IDs.(nanoid)
+
+## Server Side Rendering(SSR)
+- When a HTML page is being rendered on the server is typically known as server side rendering, like next.js
+- For generating html on the server end, and use server side rendering we use some template engines, like ejs (embedded javascript templates), pug, handlebars.

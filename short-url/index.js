@@ -3,7 +3,7 @@ import express from 'express'
 import connectDB from './db/index.js'
 import path from "path"
 import urlRoute from "./routes/url.routes.js" 
-import { Url } from './models/url.model.js'
+import staticRouter from './routes/staticRouter.js'
 
 dotenv.config({
     path: "./.env"
@@ -31,11 +31,5 @@ connectDB()
 app.set("view engine", "ejs")
 app.set("views", path.resolve("./views"))
 
-app.get("/test", async (req, res) => {
-    const allUrls = await Url.find({})
-    return res.render('home', {
-        urls: allUrls
-    })
-})
-
 app.use("/url", urlRoute)
+app.use("/", staticRouter)

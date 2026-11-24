@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import express from 'express'
-import connectDB from '../mvc/db/index.js'
+import connectDB from './db/index.js'
 import urlRoute from "./routes/url.routes.js" 
 
 dotenv.config({

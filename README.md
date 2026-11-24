@@ -30,3 +30,6 @@
 ## MVC (Model, View, Controller)
 - Controller manuplilates the model, and the model updates the view. This is the architecture and the flow of MVC model.
 - User calls the route, route calls the controllers, and controller manipulates the models.
+
+## ShortID
+- ShortID is a package that generates short IDs.(nanoid)

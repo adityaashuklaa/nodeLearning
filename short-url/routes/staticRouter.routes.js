@@ -1,13 +1,17 @@
 import express from "express";
 import { Url } from "../models/url.model.js";
 
-const staticRouter = express.Router();
+const router = express.Router();
 
-staticRouter.get("/", async (req, res) => {
+router.get("/", async (req, res) => {
     const allUrls = await Url.find({})
     return res.render('home', {
         urls: allUrls
     })
 })
 
-export default staticRouter
+router.get("/signup", (req, res) => {
+    return res.render("signup")
+})
+
+export default router

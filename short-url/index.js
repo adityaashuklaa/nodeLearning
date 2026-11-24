@@ -3,7 +3,8 @@ import express from 'express'
 import connectDB from './db/index.js'
 import path from "path"
 import urlRoute from "./routes/url.routes.js" 
-import staticRouter from './routes/staticRouter.js'
+import staticRouter from './routes/staticRouter.routes.js'
+import userRoute from "./routes/user.routes.js"
 
 dotenv.config({
     path: "./.env"
@@ -33,3 +34,4 @@ app.set("views", path.resolve("./views"))
 
 app.use("/url", urlRoute)
 app.use("/", staticRouter)
+app.use("/user", userRoute)

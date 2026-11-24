@@ -37,3 +37,8 @@
 ## Server Side Rendering(SSR)
 - When a HTML page is being rendered on the server is typically known as server side rendering, like next.js
 - For generating html on the server end, and use server side rendering we use some template engines, like ejs (embedded javascript templates), pug, handlebars.
+
+## Authentication
+- Authentication basically have two patterns, one is statefull and another one is stateless
+- Statefull : Which maintains state or data on server side
+- Stateless : Which has no state

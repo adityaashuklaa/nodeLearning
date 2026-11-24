@@ -41,4 +41,5 @@
 ## Authentication
 - Authentication basically have two patterns, one is statefull and another one is stateless
 - Statefull : Which maintains state or data on server side
+- This state can be sent by the server in the format of the cookies, response, headers
 - Stateless : Which has no state

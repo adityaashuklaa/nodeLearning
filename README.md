@@ -42,4 +42,8 @@
 - Authentication basically have two patterns, one is statefull and another one is stateless
 - Statefull : Which maintains state or data on server side
 - This state can be sent by the server in the format of the cookies, response, headers
+- Cons : In statefull based authentication, if the server is being restarted and for some reasons if the state if being lost, then all the users will get logged out from the application.
+- Statefull authentication is memory intensive.
 - Stateless : Which has no state
+- In this method, the state is being sent in the payload and saved on the client side.
+- jwt(json webtokens) is a example of stateless based authentication

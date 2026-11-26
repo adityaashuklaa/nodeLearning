@@ -47,3 +47,9 @@
 - Stateless : Which has no state
 - In this method, the state is being sent in the payload and saved on the client side.
 - jwt(json webtokens) is a example of stateless based authentication
+
+## Cookies
+- Cookies is domain specific, it doesn't share data i.e cookie accross other domains.
+- Expiration time can also be set on the cookies.
+- Cookies is a browser feature and it is absent in the mobile applications, so therefore in that particular scenario we use response headers and a built in header with is Authorization.
+- Authorization: "Bearer <token>"

@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser"
 import urlRoute from "./routes/url.routes.js" 
 import staticRouter from './routes/staticRouter.routes.js'
 import userRoute from "./routes/user.routes.js"
-import { CheckAuth, restrictToLoggedInUserOnly } from './middlewares/auth.middleware.js'
+import { checkForAuthentication, restrictTo } from './middlewares/auth.middleware.js'
 
 dotenv.config({
     path: "./.env"
@@ -17,6 +17,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true, limit: "16kb"}))
 app.use(cookieParser())
+app.use(checkForAuthentication)
 
 connectDB()
 .then(() => {
@@ -35,6 +36,6 @@ connectDB()
 app.set("view engine", "ejs")
 app.set("views", path.resolve("./views"))
 
-app.use("/url", restrictToLoggedInUserOnly, urlRoute)
-app.use("/", CheckAuth, staticRouter)
+app.use("/url", restrictTo(["NORMAL", "ADMIN"]), urlRoute)
+app.use("/", staticRouter)
 app.use("/user", userRoute)

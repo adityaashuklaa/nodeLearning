@@ -7,7 +7,6 @@ export function setUser(user) {
         role: user.role
     }, process.env.JWT_SECRET)
 }
-
 export function getUser(token) {
     if (!token) return null;
     try {

@@ -13,3 +13,11 @@ app.use(express.urlencoded({extended: true, limit: "16kb"}))
 
 app.set("view engine", "ejs")
 app.set("views", path.resolve("./views"))
+
+app.get("/", (req, res) => {
+    return res.render("homepage")
+})
+
+app.listen(process.env.PORT, () => {
+    console.log(`Port is listening to ${process.env.PORT}`);
+})

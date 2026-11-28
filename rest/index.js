@@ -59,7 +59,6 @@
             return res.json({ status: "success", id });
         });
     })
-
     app.post("/api/users", (req, res) => {
         const body = req.body
         const newId = users.length ? Math.max(...users.map((u) => u.id)) + 1 : 1;
